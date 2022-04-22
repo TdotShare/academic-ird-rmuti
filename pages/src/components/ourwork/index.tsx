@@ -27,7 +27,7 @@ const Ourwork: NextPage<AppProps> = ({ workdata }) => {
                 </div>
                 <div className="row">
                     {
-                        workdata.data.map(({ id , title , detail}) => {
+                        workdata ? workdata.data.map(({ id , title , detail}) => {
                             return  (
                                 <div key={id} className="col-lg-6 col-md-6">
                                     <div className="whats-included__item wow fadeInUp" data-wow-delay=".2s">
@@ -45,6 +45,10 @@ const Ourwork: NextPage<AppProps> = ({ workdata }) => {
                                 </div>
                             )
                         })
+
+                        :
+
+                        <></>
                     }
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 
 const Header: NextPage = () => {
     return (
@@ -19,19 +18,19 @@ const Header: NextPage = () => {
                             <nav className="header__menu">
                                 <ul className="main-menu main-menu-white">
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">หน้าหลัก สวพ.</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/">หน้าหลัก สวพ.</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">บุคลากร สวพ.</a>
+                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/hr/system/psoffice">บุคลากร สวพ.</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">ระบบสารสนเทศของเรา</a>
+                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/main">ระบบสารสนเทศของเรา</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">ดาวน์โหลดเอกสาร</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/2020/world/downloads">ดาวน์โหลดเอกสาร</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">ติดต่อเรา</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/archives/2039">ติดต่อเรา</a>
                                     </li>
                                 </ul>
                             </nav>

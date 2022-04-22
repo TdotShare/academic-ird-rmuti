@@ -14,7 +14,7 @@ const Team: NextPage = () => {
 
             if (resp.data.bypass) {
 
-                console.log(resp.data.data)
+                //console.log(resp.data.data)
                 setModel(resp.data.data)
 
             } else {

@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { titleConfig } from '../../../../config/title'
 
 const Footer: NextPage = () => {
 
@@ -18,7 +19,7 @@ const Footer: NextPage = () => {
                                         <div className="footer__social__link">
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="https://www.facebook.com/profile.php?id=100064713641874">
                                                         <i className="fab fa-facebook-f" />
                                                     </a>
                                                 </li>
@@ -38,10 +39,10 @@ const Footer: NextPage = () => {
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.4s">
                                             <h2 className="footer__widget__title">ลิงค์ด่วน</h2>
                                             <ul className="footer__widget__list">
-                                                <li><a href="#">กิจกรรม สวพ.</a></li>
-                                                <li><a href="#">ประชาสัมพันธ์ สวพ.</a></li>
-                                                <li><a href="#">จดหมายข่าว</a></li>
-                                                <li><a href="#">เว็บข่าว สวพ.</a></li>
+                                                <li><a href="https://ird.rmuti.ac.th/main/archives/category/activity">กิจกรรม สวพ.</a></li>
+                                                <li><a href="https://ird.rmuti.ac.th/main/archives/category/public_relations">ประชาสัมพันธ์ สวพ.</a></li>
+                                                <li><a href="https://ird.rmuti.ac.th/main/archives/1721">จดหมายข่าว</a></li>
+                                                <li><a href="https://ird.rmuti.ac.th/main">เว็บข่าว สวพ.</a></li>
                                             </ul>
                                         </aside>
                                     </div>
@@ -49,10 +50,10 @@ const Footer: NextPage = () => {
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.2s">
                                             <h2 className="footer__widget__title">ระบบสารสนเทศ</h2>
                                             <ul className="footer__widget__list">
-                                                <li><a href="#">ระบบเก็บข้อมูล Google scholar</a></li>
-                                                <li><a href="#">ระบบจองห้องประชุม</a></li>
-                                                <li><a href="#">ระบบจองเครื่องมือวิจัย</a></li>
-                                                <li><a href="#">ระบบสารสนเทศทั้งหมด</a></li>
+                                                <li><a href="https://u2tjob.ird.rmuti.ac.th/">ระบบรับสมัครงาน U2T</a></li>
+                                                <li><a href="https://mis-ird.rmuti.ac.th/meeting/calendar">ระบบจองห้องประชุม</a></li>
+                                                <li><a href="https://inst.ird.rmuti.ac.th/">ระบบจองเครื่องมือวิจัย</a></li>
+                                                <li><a href="https://mis-ird.rmuti.ac.th/main/">ระบบสารสนเทศทั้งหมด</a></li>
                                             </ul>
                                         </aside>
                                     </div>
@@ -60,10 +61,10 @@ const Footer: NextPage = () => {
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.3s">
                                             <h2 className="footer__widget__title">หน่วยงานภายใน</h2>
                                             <ul className="footer__widget__list">
-                                                <li><a href="#">บริหารงานทั่วไป</a></li>
-                                                <li><a href="#">บริการวิชาการ</a></li>
-                                                <li><a href="#">วิจัยและพัฒนา</a></li>
-                                                <li><a href="#">ทรัพย์สินทางปัญญา</a></li>
+                                                <li><a href="https://admin.ird.rmuti.ac.th/">บริหารงานทั่วไป</a></li>
+                                                <li><a href="https://academic.ird.rmuti.ac.th/">บริการวิชาการ</a></li>
+                                                <li><a href="https://research.ird.rmuti.ac.th/">วิจัยและพัฒนา</a></li>
+                                                <li><a href="https://ip.ird.rmuti.ac.th/">ทรัพย์สินทางปัญญา</a></li>
                                             </ul>
                                         </aside>
                                     </div>
@@ -74,7 +75,7 @@ const Footer: NextPage = () => {
                                                 <li>
                                                     <a href="#">
                                                         <i className="fa fa-phone" />
-                                                        2535
+                                                        {titleConfig.Tel}
                                                     </a>
                                                 </li>
                                                 <li>
@@ -99,7 +100,7 @@ const Footer: NextPage = () => {
                             <div className="col-md-12">
                                 <div className="footer__copyright">
                                     <h2>
-                                        Copyright <a href="https://ird.rmuti.ac.th/">สถาบันวิจัยและพัฒนา มทร.อีสาน</a> All Rights Reserved
+                                        Copyright <a href="https://ird.rmuti.ac.th/main">สถาบันวิจัยและพัฒนา มทร.อีสาน</a> All Rights Reserved
                                         
                                     </h2>
                                 </div>
