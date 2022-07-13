@@ -10,7 +10,7 @@ const Header: NextPage = () => {
                         <div className="col-md-2">
                             <div className="header__logo">
                                 <a href="index.html">
-                                    <img src="/irdmain_and_logo-02.png" alt="Logo" />
+                                    <img src="./irdmain_and_logo-02.png" alt="Logo" />
                                 </a>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ const Header: NextPage = () => {
                             <div className="header__mobile__menu__item">
                                 <div className="header__logo">
                                     <a href="index.html">
-                                        <img src="/irdmain_and_logo-02.png" alt="Logo" />
+                                        <img src="./irdmain_and_logo-02.png" alt="Logo" />
                                     </a>
                                 </div>
                                 <div className="header__mobile__button">

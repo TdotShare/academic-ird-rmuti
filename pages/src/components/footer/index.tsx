@@ -14,7 +14,7 @@ const Footer: NextPage = () => {
                                 <aside className="footer__widget">
                                     <div className="footer__info">
                                         <div className="footer__logo">
-                                            <img src="/irdmain_and_logo-02.png" alt="image" />
+                                            <img src="./irdmain_and_logo-02.png" alt="image" />
                                         </div>
                                         <div className="footer__social__link">
                                             <ul>

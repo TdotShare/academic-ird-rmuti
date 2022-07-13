@@ -11,7 +11,7 @@ const Ourwork: NextPage<AppProps> = ({ workdata }) => {
     return (
         <section className="whats-included">
             <div className="whats-included__shape">
-                <img src="/template/images/whats-included/bg-shape.png" alt="img" />
+                <img src="./template/images/whats-included/bg-shape.png" alt="img" />
             </div>
             <div className="container">
                 <div className="row">
@@ -32,8 +32,8 @@ const Ourwork: NextPage<AppProps> = ({ workdata }) => {
                                 <div key={id} className="col-lg-6 col-md-6">
                                     <div className="whats-included__item wow fadeInUp" data-wow-delay=".2s">
                                         <div className="whats-included__item__icon">
-                                            <img className="bg-shape" src="/template/images/whats-included/bg-icon-03.png" alt="img" />
-                                            <img className="svg-icon" src="/template/images/whats-included/3.svg" alt="img" />
+                                            <img className="bg-shape" src="./template/images/whats-included/bg-icon-03.png" alt="img" />
+                                            <img className="svg-icon" src="./template/images/whats-included/3.svg" alt="img" />
                                         </div>
                                         <div className="whats-included__item__text">
                                             <h2 className="whats-included__item__title">{title}</h2>
