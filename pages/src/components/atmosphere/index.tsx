@@ -1,7 +1,18 @@
 import type { NextPage } from 'next'
-import { titleConfig } from '../../../../config/title'
+import { langDisplay } from '../../../../config/lang';
 
-const Atmosphere : NextPage = () => {
+
+type AppProps = {
+    lang : string
+};
+
+
+const Atmosphere : NextPage <AppProps> = ({ lang = "th" }) => {
+
+    if (!["th", "en"].includes(lang)) {
+        lang = "th"
+    }
+
     return (
         <section className="whats-included">
             <div className="whats-included__shape">
@@ -11,10 +22,9 @@ const Atmosphere : NextPage = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="section__title">
-                            {/* <h3>การทำงาน</h3> */}
-                            <h2>รูปภาพฝ่ายของเรา</h2>
+                            <h2>{langDisplay[lang].picture_our_department}</h2>
                             <p>
-                                รูปภาพฝ่ายของ {titleConfig.NameFull}
+                                {langDisplay[lang].picture_of} {langDisplay[lang].breadcrumb_namefull}
                             </p>
                         </div>
                     </div>

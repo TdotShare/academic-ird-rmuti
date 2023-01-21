@@ -1,6 +1,23 @@
 import type { NextPage } from 'next'
+import { langDisplay } from '../../../../config/lang';
 
-const Header: NextPage = () => {
+
+
+type AppProps = {
+    lang: string
+};
+
+const Header: NextPage<AppProps> = ({ lang = "th" }) => {
+
+    if (!["th", "en"].includes(lang)) {
+        lang = "th"
+    }
+
+    const changeLang = () => {
+        let path_lang = `https://${window.location.host}/main/?lang=${lang === 'th' ? 'en' : 'th'}`
+        window.location.href = path_lang
+    }
+
     return (
         <header className="header header__bg">
 
@@ -18,19 +35,22 @@ const Header: NextPage = () => {
                             <nav className="header__menu">
                                 <ul className="main-menu main-menu-white">
                                     <li className="nav-item">
-                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/">หน้าหลัก สวพ.</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/">{langDisplay[lang].menu_main_home}</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/hr/system/psoffice">บุคลากร สวพ.</a>
+                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/hr/system/psoffice">{langDisplay[lang].menu_main_personnel}</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/main">ระบบสารสนเทศของเรา</a>
+                                        <a className="nav-link" href="https://mis-ird.rmuti.ac.th/main">{langDisplay[lang].menu_main_information}</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="https://ird.rmuti.ac.th/2020/world/downloads">ดาวน์โหลดเอกสาร</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/2020/world/downloads">{langDisplay[lang].menu_main_doc_download}</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/archives/2039">ติดต่อเรา</a>
+                                        <a className="nav-link" href="https://ird.rmuti.ac.th/main/archives/2039">{langDisplay[lang].menu_main_contact}</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" onClick={() => changeLang()} >{langDisplay[lang].menu_main_change_lang} ({lang === "th" ? "en" : "th"})</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -60,19 +80,22 @@ const Header: NextPage = () => {
                                         </div>
                                         <ul className="navbar-nav mobile-menu">
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">หน้าหลัก สวพ.</a>
+                                                <a className="nav-link" href="https://ird.rmuti.ac.th/main/">{langDisplay[lang].menu_main_home}</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">บุคลากร สวพ.</a>
+                                                <a className="nav-link" href="https://mis-ird.rmuti.ac.th/hr/system/psoffice">{langDisplay[lang].menu_main_personnel}</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">ระบบสารสนเทศของเรา</a>
+                                                <a className="nav-link" href="https://mis-ird.rmuti.ac.th/main">{langDisplay[lang].menu_main_information}</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">ดาวน์โหลดเอกสาร</a>
+                                                <a className="nav-link" href="https://ird.rmuti.ac.th/2020/world/downloads">{langDisplay[lang].menu_main_doc_download}</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">ติดต่อเรา</a>
+                                                <a className="nav-link" href="https://ird.rmuti.ac.th/main/archives/2039">{langDisplay[lang].menu_main_contact}</a>
+                                            </li>
+                                            <li className="nav-item">
+                                                <a className="nav-link" onClick={() => changeLang()} >{langDisplay[lang].menu_main_change_lang} ({lang === "th" ? "en" : "th"})</a>
                                             </li>
                                         </ul>
                                     </nav>

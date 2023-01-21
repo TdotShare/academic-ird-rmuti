@@ -1,10 +1,19 @@
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import { titleConfig } from '../../../../config/title'
 import axios from 'axios';
 import { TAPIdata, User } from '../../../../data/user';
+import { langDisplay } from '../../../../config/lang';
 
-const Team: NextPage = () => {
+type AppProps = {
+    lang : string
+};
+
+
+const Team: NextPage <AppProps> = ({ lang = "th" }) => {
+
+    if (!["th", "en"].includes(lang)) {
+        lang = "th"
+    }
 
     const [model, setModel] = useState<User[]>([])
 
@@ -36,8 +45,9 @@ const Team: NextPage = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="section__title section__title--white">
-                            <h2>บุคลากรของเรา</h2>
-                            <p> บุคลากรของฝ่าย {titleConfig.NameFull} มีดังนี้ </p>
+                            <h2>{langDisplay[lang].personnel_our_people}</h2>
+                            <p> {langDisplay[lang].personnel_department_personnel} {langDisplay[lang].breadcrumb_namefull}
+                            {langDisplay[lang].personnel_list} </p>
                         </div>
                     </div>
                 </div>

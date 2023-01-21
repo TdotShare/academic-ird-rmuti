@@ -1,7 +1,19 @@
 import type { NextPage } from 'next'
 import { titleConfig } from '../../../../config/title'
+import { langDisplay } from '../../../../config/lang';
 
-const Footer: NextPage = () => {
+
+type AppProps = {
+    lang: string
+};
+
+
+const Footer: NextPage<AppProps> = ({ lang = "th" }) => {
+
+
+    if (!["th", "en"].includes(lang)) {
+        lang = "th"
+    }
 
     return (
         <>
@@ -37,7 +49,7 @@ const Footer: NextPage = () => {
                                 <div className="row">
                                     <div className="col-lg-3 col-6">
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.4s">
-                                            <h2 className="footer__widget__title">ลิงค์ด่วน</h2>
+                                        <h2 className="footer__widget__title">{langDisplay[lang].footer_quick_link}</h2>
                                             <ul className="footer__widget__list">
                                                 <li><a href="https://ird.rmuti.ac.th/main/archives/category/activity">กิจกรรม สวพ.</a></li>
                                                 <li><a href="https://ird.rmuti.ac.th/main/archives/category/public_relations">ประชาสัมพันธ์ สวพ.</a></li>
@@ -48,7 +60,7 @@ const Footer: NextPage = () => {
                                     </div>
                                     <div className="col-lg-3 col-6">
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.2s">
-                                            <h2 className="footer__widget__title">ระบบสารสนเทศ</h2>
+                                            <h2 className="footer__widget__title">{langDisplay[lang].footer_system_link}</h2>
                                             <ul className="footer__widget__list">
                                                 <li><a href="https://u2tjob.ird.rmuti.ac.th/">ระบบรับสมัครงาน U2T</a></li>
                                                 <li><a href="https://mis-ird.rmuti.ac.th/meeting/calendar">ระบบจองห้องประชุม</a></li>
@@ -59,7 +71,7 @@ const Footer: NextPage = () => {
                                     </div>
                                     <div className="col-lg-3 col-6">
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.3s">
-                                            <h2 className="footer__widget__title">หน่วยงานภายใน</h2>
+                                            <h2 className="footer__widget__title">{langDisplay[lang].footer_internal_department_link}</h2>
                                             <ul className="footer__widget__list">
                                                 <li><a href="https://admin.ird.rmuti.ac.th/">บริหารงานทั่วไป</a></li>
                                                 <li><a href="https://academic.ird.rmuti.ac.th/">บริการวิชาการ</a></li>
@@ -70,7 +82,7 @@ const Footer: NextPage = () => {
                                     </div>
                                     <div className="col-lg-3 col-6">
                                         <aside className="footer__widget wow fadeInUp" data-wow-delay="0.5s">
-                                            <h2 className="footer__widget__title">ติดต่อเรา</h2>
+                                            <h2 className="footer__widget__title">{langDisplay[lang].footer_contact_us}</h2>
                                             <ul className="footer__widget__list">
                                                 <li>
                                                     <a href="#">
@@ -100,8 +112,7 @@ const Footer: NextPage = () => {
                             <div className="col-md-12">
                                 <div className="footer__copyright">
                                     <h2>
-                                        Copyright <a href="https://ird.rmuti.ac.th/main">สถาบันวิจัยและพัฒนา มทร.อีสาน</a> All Rights Reserved
-                                        
+                                    Copyright <a href="https://ird.rmuti.ac.th/main">{langDisplay[lang].breadcrumb_organization_name} / {langDisplay[lang].breadcrumb_rmuti_name}</a> All Rights Reserved     
                                     </h2>
                                 </div>
                             </div>

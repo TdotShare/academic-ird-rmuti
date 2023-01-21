@@ -1,7 +1,16 @@
 import type { NextPage } from 'next'
-import { titleConfig } from '../../../../config/title'
+import { langDisplay } from '../../../../config/lang';
 
-const Breadcrumb: NextPage = () => {
+type AppProps = {
+    lang: string
+};
+
+const Breadcrumb: NextPage<AppProps> = ({ lang = "th" }) => {
+
+    if (!["th", "en"].includes(lang)) {
+        lang = "th"
+    }
+
     return (
         <section className="breadcrumb">
             <div className="breadcrumb__shape__v1">
@@ -12,16 +21,16 @@ const Breadcrumb: NextPage = () => {
             </div>
             <div className="breadcrumb__item">
                 <div className="breadcrumb__top">
-                    <h2 className="breadcrumb__title">{titleConfig.NameFull}</h2>
+                    <h2 className="breadcrumb__title">{langDisplay[lang].breadcrumb_namefull}</h2>
                 </div>
                 <div className="breadcrumb__bottom">
                     <div className="breadcrumb__bar" />
                     <ul className="breadcrumb__list">
                         <li>
-                            <a href="index.html">{titleConfig.OrganizationName}</a>
+                            <a href="index.html">{langDisplay[lang].breadcrumb_organization_name}</a>
                         </li>
                         <li>
-                            {titleConfig.RmutiName}
+                            {langDisplay[lang].breadcrumb_rmuti_name}
                         </li>
                     </ul>
                 </div>
